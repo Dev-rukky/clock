@@ -13,25 +13,27 @@ const startBox = document.querySelector('.container');
 
 
 startButton.addEventListener('click', () => {
-   interval = setInterval(startTimer, 10)
-   timerbox.style.display = '';
-        
-        timerbox.classList.add('fadeIn');
-        startBox.style.height = '620px';
-        startBox.classList.add('centerContent');
+    interval = setInterval(startTimer, 10);
+    timerbox.style.display = '';
+
+    timerbox.classList.add('fadeIn');
+    startBox.style.height = '620px';
+    startBox.classList.add('centerContent');
 });
 
 stopButton.addEventListener('click', () => {
-   clearInterval(interval)
- });
+    clearInterval(interval)
+});
 
- resetButton.addEventListener('click', () => {
+resetButton.addEventListener('click', () => {
     clearInterval(interval)
     tens = "00";
     seconds = "00";
+    mins = "00";
     secondsTimer.innerHTML = seconds;
     tensTimer.innerHTML = tens;
-  });
+    minsTimer.innerHTML = mins;
+});
 
 function startTimer() {
     tens++;
